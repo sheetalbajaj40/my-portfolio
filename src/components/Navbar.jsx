@@ -10,7 +10,15 @@ const Navbar = () => {
     <>
       <nav className="bg-gray-900 text-white py-4 fixed w-full top-0 z-50 shadow-lg">
         <div className="container mx-auto flex justify-between items-center px-6 md:px-0">
-          <h1 className="text-2xl font-extrabold tracking-wide text-yellow-400">Front End Developer</h1>
+          <div
+            onClick={() => {
+              window.location.href = '/';
+            }}
+            className="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-gray-900 font-bold text-xl select-none cursor-pointer"
+          >
+            SB
+          </div>
+
 
           {/* Desktop Navbar */}
           <ul className="hidden md:flex space-x-8 text-lg font-semibold">
@@ -19,7 +27,7 @@ const Navbar = () => {
               const name = path === '/' ? 'Home' : cleanPath.charAt(0).toUpperCase() + cleanPath.slice(1);
               return (
                 <li key={i}>
-                  <NavLink 
+                  <NavLink
                     to={path}
                     className={({ isActive }) =>
                       `hover:text-yellow-500 transition-colors duration-300 ${isActive ? 'text-yellow-500' : 'text-gray-300'}`
@@ -55,9 +63,8 @@ const Navbar = () => {
 
         {/* Mobile Menu (Dropdown) */}
         <div
-          className={`md:hidden bg-gray-900 text-white overflow-hidden transition-max-height duration-500 ${
-            isMenuOpen ? 'max-h-60 py-4' : 'max-h-0'
-          }`}
+          className={`md:hidden bg-gray-900 text-white overflow-hidden transition-max-height duration-500 ${isMenuOpen ? 'max-h-60 py-4' : 'max-h-0'
+            }`}
         >
           <ul className="space-y-4 text-center text-lg font-semibold">
             {['/', '/about', '/projects', '/contact'].map((path, i) => {
@@ -68,8 +75,7 @@ const Navbar = () => {
                   <NavLink
                     to={path}
                     className={({ isActive }) =>
-                      `block hover:text-yellow-500 transition-colors duration-300 ${
-                        isActive ? 'text-yellow-500' : 'text-gray-300'
+                      `block hover:text-yellow-500 transition-colors duration-300 ${isActive ? 'text-yellow-500' : 'text-gray-300'
                       }`
                     }
                     onClick={() => setIsMenuOpen(false)}
