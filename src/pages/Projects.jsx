@@ -3,16 +3,28 @@ import ProjectCard from '../components/ProjectCard';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-900 text-gray-100">
-      <div className="container mx-auto max-w-6xl text-center px-6">
-        <h2 className="text-4xl font-extrabold mb-8 text-yellow-400 tracking-wide">
-          My Projects
-        </h2>
-        <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Here are a few selected projects where I applied modern technologies like React.js, Redux Toolkit, and Tailwind CSS to solve real-world problems.
-        </p>
+    <section id="projects" className="py-20 bg-gray-900 text-gray-100 relative overflow-hidden">
+      {/* Background Decorations */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-32 w-96 h-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="container mx-auto max-w-6xl px-6 relative">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+              Featured Projects
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Explore my latest projects showcasing modern web development using React.js, Redux Toolkit, and Tailwind CSS.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <ProjectCard
             title="KAIZEN"
             description="Process improvement tracking platform. Built responsive UI components using React.js, Tailwind CSS, and Redux Toolkit. Integrated REST APIs and focused on code reusability and performance optimization."
@@ -29,7 +41,50 @@ const Projects = () => {
             imageUrl="/images/timesheet.jpg"
           />
 
-          {/* Add more real or placeholder projects as you go */}
+          {/* Add a placeholder card with a gradient background if no image */}
+          <div className="group relative bg-gradient-to-br from-gray-800 via-gray-800/50 to-gray-900 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/10 border border-gray-700/50 hover:border-yellow-400/50">
+            <div className="p-6 flex flex-col h-full justify-between min-h-[400px]">
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold">
+                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                    More Coming Soon
+                  </span>
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  I'm constantly working on new projects. Check back soon for more exciting developments!
+                </p>
+              </div>
+              <div className="flex items-center justify-center mt-6">
+                <span className="inline-flex items-center gap-2 text-yellow-400/70">
+                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  In Development
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <a
+            href="https://github.com/bajajsheetal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-300 group"
+          >
+            View All Projects
+            <svg 
+              className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

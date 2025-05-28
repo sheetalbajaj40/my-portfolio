@@ -2,32 +2,112 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-gray-900 text-white">
-      <div className="container mx-auto text-center px-6">
-        <h2 className="text-3xl font-extrabold mb-8">Contact Me</h2>
-        <form className="max-w-lg mx-auto space-y-6">
-          <div className="flex flex-col">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-4 mb-4 rounded-lg border-2 border-gray-700 focus:outline-none focus:border-yellow-500 transition duration-300"
-              required
-            />
+    <section id="contact" className="py-16 bg-gray-900 text-gray-100">
+      <div className="container mx-auto max-w-4xl px-6">
+        <h3 className="text-3xl font-extrabold mb-12 text-yellow-400 tracking-wide text-center">
+          Get In Touch
+        </h3>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {/* Email Card */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 text-center group">
+            <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-400/20 transition-colors duration-300">
+              <svg className="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold text-yellow-300 mb-2">Email</h4>
+            <p className="text-gray-400">contact@example.com</p>
           </div>
-          <div className="flex flex-col">
-            <textarea
-              placeholder="Your Message"
-              className="w-full p-4 mb-4 rounded-lg border-2 border-gray-700 focus:outline-none focus:border-yellow-500 transition duration-300"
-              required
-            ></textarea>
+
+          {/* Location Card */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 text-center group">
+            <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-400/20 transition-colors duration-300">
+              <svg className="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold text-yellow-300 mb-2">Location</h4>
+            <p className="text-gray-400">Gurugram, India</p>
           </div>
-          <button
-            type="submit"
-            className="bg-yellow-500 text-black py-3 px-8 rounded-lg font-semibold text-lg w-full hover:bg-yellow-400 transition duration-300 ease-in-out transform hover:scale-105"
-          >
-            Send Message
-          </button>
-        </form>
+
+          {/* Phone Card */}
+          <div className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 text-center group">
+            <div className="w-16 h-16 bg-yellow-400/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-400/20 transition-colors duration-300">
+              <svg className="w-8 h-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <h4 className="text-xl font-semibold text-yellow-300 mb-2">Phone</h4>
+            <p className="text-gray-400">+91 (XXX) XXX-XXXX</p>
+          </div>
+        </div>
+
+        <div className="bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
+          <form className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="text-yellow-300 mb-2 font-medium">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  className="bg-gray-700 text-gray-100 px-4 py-3 rounded-lg border-2 border-gray-600 focus:outline-none focus:border-yellow-400 transition duration-300"
+                  required
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-yellow-300 mb-2 font-medium">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  className="bg-gray-700 text-gray-100 px-4 py-3 rounded-lg border-2 border-gray-600 focus:outline-none focus:border-yellow-400 transition duration-300"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col">
+              <label htmlFor="subject" className="text-yellow-300 mb-2 font-medium">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                className="bg-gray-700 text-gray-100 px-4 py-3 rounded-lg border-2 border-gray-600 focus:outline-none focus:border-yellow-400 transition duration-300"
+                required
+              />
+            </div>
+
+            <div className="flex flex-col">
+              <label htmlFor="message" className="text-yellow-300 mb-2 font-medium">Message</label>
+              <textarea
+                id="message"
+                rows="6"
+                className="bg-gray-700 text-gray-100 px-4 py-3 rounded-lg border-2 border-gray-600 focus:outline-none focus:border-yellow-400 transition duration-300 resize-none"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2 group"
+            >
+              Send Message
+              <svg 
+                className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

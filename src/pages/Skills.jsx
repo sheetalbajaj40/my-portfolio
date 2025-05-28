@@ -23,42 +23,80 @@ const skillsData = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-16 bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto px-6 text-center">
-        <h3 className="text-3xl font-extrabold mb-12 text-gray-900 dark:text-white">My Skills</h3>
+    <section id="skills" className="py-16 bg-gray-900">
+      <div className="container mx-auto px-6">
+        <h3 className="text-3xl font-extrabold mb-12 text-center">
+          <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            Technical Skills
+          </span>
+        </h3>
 
-        {Object.entries(skillsData).map(([category, skills]) => (
-          <div key={category} className="mb-12 max-w-3xl mx-auto text-left">
-            <h4 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">{category}</h4>
-            <div className="space-y-6">
-              {skills.map(({ name, level, icon }) => (
-                <div key={name} className="flex items-center space-x-4">
-                  <img src={icon} alt={name} className="w-10 h-10" loading="lazy" />
-                  <div className="flex-1">
-                    <div className="flex justify-between mb-1">
-                      <span className="font-medium text-gray-700 dark:text-gray-300">{name}</span>
-                      <span className="text-gray-500 dark:text-gray-400">{level}%</span>
+        <div className="grid gap-12 max-w-6xl mx-auto">
+          {Object.entries(skillsData).map(([category, skills]) => (
+            <div key={category} className="relative">
+              {/* Category Title */}
+              <div className="flex items-center mb-8">
+                <h4 className="text-2xl font-bold text-yellow-400">{category}</h4>
+                <div className="flex-grow ml-4 h-px bg-gradient-to-r from-yellow-400/50 to-transparent"></div>
+              </div>
+
+              {/* Skills Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {skills.map(({ name, level, icon }) => (
+                  <div
+                    key={name}
+                    className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/10"
+                  >
+                    {/* Skill Header */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-yellow-400/10 p-2 group-hover:bg-yellow-400/20 transition-colors duration-300">
+                        <img
+                          src={icon}
+                          alt={name}
+                          className="w-full h-full object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-lg text-gray-100 mb-1 group-hover:text-yellow-400 transition-colors duration-300">
+                          {name}
+                        </h5>
+                        <span className="text-yellow-400/80 text-sm font-medium">
+                          Proficiency: {level}%
+                        </span>
+                      </div>
                     </div>
-                    <div
-                      className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-4"
-                      role="progressbar"
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-valuenow={level}
-                      aria-label={`${name} skill level`}
-                    >
+
+                    {/* Progress Bar */}
+                    <div className="relative h-2 bg-gray-700/50 rounded-full overflow-hidden">
                       <div
-                        className="bg-yellow-500 h-4 rounded-full transition-all"
+                        className="absolute top-0 left-0 h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 transition-all duration-500 ease-out"
                         style={{ width: `${level}%` }}
-                      />
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent animate-shimmer"></div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
+      {/* Add shimmer animation */}
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+        .animate-shimmer {
+          animation: shimmer 2s infinite;
+        }
+      `}</style>
     </section>
   );
 };
