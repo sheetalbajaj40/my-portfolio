@@ -4,7 +4,7 @@ const experiences = [
   {
     title: "Frontend Engineer Intern",
     company: "Third Eye AI (A JBM Group Company)",
-    period: "Dec 2024 - Present",
+    period: "June 2024 - Present",
     description: [
       "Assisted in modernizing legacy JavaScript codebases by migrating to ReactJS, improving frontend maintainability and reducing UI load times.",
       "Developed scalable and responsive UI components using ReactJS and Tailwind CSS, ensuring mobile-first, cross-browser compatibility.",
