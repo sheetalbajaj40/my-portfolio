@@ -17,7 +17,7 @@ const Contact = () => {
               </svg>
             </div>
             <h4 className="text-xl font-semibold text-yellow-300 mb-2">Email</h4>
-            <p className="text-gray-400">contact@example.com</p>
+            <p className="text-gray-400">bajajsheetal40@gmail.com</p>
           </div>
 
           {/* Location Card */}
@@ -40,7 +40,7 @@ const Contact = () => {
               </svg>
             </div>
             <h4 className="text-xl font-semibold text-yellow-300 mb-2">Phone</h4>
-            <p className="text-gray-400">+91 (XXX) XXX-XXXX</p>
+            <p className="text-gray-400">+91 (623) 961-2617</p>
           </div>
         </div>
       </div>

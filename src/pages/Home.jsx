@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Skills from './Skills';
-import Experience from './Experience';
 
 const Home = () => {
   return (
@@ -101,34 +99,6 @@ const Home = () => {
           <svg className="w-6 h-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section className="py-20 bg-gray-800/50 backdrop-blur-sm relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-              <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-                Skills & Expertise
-              </span>
-            </h2>
-            <Skills />
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-20 bg-gray-900 relative">
-        <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-              <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-                Work Experience
-              </span>
-            </h2>
-            <Experience />
-          </div>
         </div>
       </section>
     </main>

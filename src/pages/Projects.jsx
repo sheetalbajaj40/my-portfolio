@@ -1,5 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
+import kaizenDiagram from '../assets/kaizen-diagram.png';
+import timesheetImage from '../assets/download.jpeg';
 
 const Projects = () => {
   return (
@@ -19,7 +21,7 @@ const Projects = () => {
             </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Explore my latest projects showcasing modern web development using React.js, Redux Toolkit, and Tailwind CSS.
+            Explore my latest projects showcasing modern web development using React.js and Tailwind CSS.
           </p>
         </div>
 
@@ -28,17 +30,13 @@ const Projects = () => {
           <ProjectCard
             title="KAIZEN"
             description="Process improvement tracking platform. Built responsive UI components using React.js, Tailwind CSS, and Redux Toolkit. Integrated REST APIs and focused on code reusability and performance optimization."
-            link="https://github.com/bajajsheetal/KAIZEN"
-            demoLink={null}
-            imageUrl="/images/kaizen.jpg"
+            imageUrl={kaizenDiagram}
           />
 
           <ProjectCard
             title="TIMESHEET"
             description="A time-tracking application for employees. Developed dynamic forms using React.js and Bootstrap. Integrated RESTful APIs to manage task data and optimized UX for better real-time task logging."
-            link="https://github.com/bajajsheetal/TIMESHEET"
-            demoLink={null}
-            imageUrl="/images/timesheet.jpg"
+            imageUrl={timesheetImage}
           />
 
           {/* Add a placeholder card with a gradient background if no image */}
@@ -65,26 +63,6 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <a
-            href="https://github.com/bajajsheetal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-300 group"
-          >
-            View All Projects
-            <svg 
-              className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
         </div>
       </div>
     </section>
