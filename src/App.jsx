@@ -1,22 +1,24 @@
 import React, { useRef, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
+// Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+// Pages
 import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import About from './pages/About';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
-import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-
   return null;
 }
 
@@ -44,21 +46,14 @@ const LandingPage = ({ refs }) => (
   </>
 );
 
-const MainContent = () => {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const experienceRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
-
+function App() {
   const refs = {
-    homeRef,
-    aboutRef,
-    skillsRef,
-    experienceRef,
-    projectsRef,
-    contactRef
+    homeRef: useRef(null),
+    aboutRef: useRef(null),
+    skillsRef: useRef(null),
+    experienceRef: useRef(null),
+    projectsRef: useRef(null),
+    contactRef: useRef(null)
   };
 
   const scrollToSection = (ref) => {
@@ -66,55 +61,22 @@ const MainContent = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar scrollToSection={scrollToSection} refs={refs} />
-
-      <main className="flex-grow">
-        <Routes>
-          {/* Landing page with all sections */}
-          <Route path="/" element={<LandingPage refs={refs} />} />
-          
-          {/* Individual page routes */}
-          <Route path="/about" element={
-            <section className="min-h-screen">
-              <About />
-            </section>
-          } />
-          <Route path="/skills" element={
-            <section className="min-h-screen">
-              <Skills />
-            </section>
-          } />
-          <Route path="/experience" element={
-            <section className="min-h-screen">
-              <Experience />
-            </section>
-          } />
-          <Route path="/projects" element={
-            <section className="min-h-screen">
-              <Projects />
-            </section>
-          } />
-          <Route path="/contact" element={
-            <section className="min-h-screen">
-              <Contact />
-            </section>
-          } />
-        </Routes>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-const App = () => {
-  return (
     <Router>
-      <ScrollToTop />
-      <MainContent />
+      <div className="min-h-screen bg-gray-900">
+        <ScrollToTop />
+        <Navbar scrollToSection={scrollToSection} refs={refs} />
+        <Routes>
+          <Route path="/" element={<LandingPage refs={refs} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
-};
+}
 
 export default App;

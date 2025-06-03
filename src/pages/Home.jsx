@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import profileImage from '../assets/profile.jpg';
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
             <div className="mb-8 relative inline-block">
               <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-yellow-400/20 p-1 bg-gray-800/50 backdrop-blur-sm">
                 <img
-                  src="/images/profile.jpg"
+                  src={profileImage}
                   alt="Sheetal Bajaj"
                   className="w-full h-full object-cover rounded-full"
                   onError={(e) => {
@@ -33,16 +34,16 @@ const Home = () => {
 
             {/* Name and Title */}
             <div className="space-y-4 mb-8">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 pb-2">
+              <h1 className="heading-primary text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 pb-2">
                 SHEETAL BAJAJ
               </h1>
-              <p className="text-xl md:text-2xl font-medium text-gray-300">
+              <p className="heading-secondary text-xl md:text-2xl text-gray-300">
                 Frontend Developer
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="body-text text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Passionate about creating sleek, responsive, and intuitive websites with modern web technologies. Currently working as a Frontend Engineer Intern at Third Eye AI (JBM Group).
             </p>
 
@@ -50,7 +51,7 @@ const Home = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/projects"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/25"
+                className="nav-text inline-flex items-center gap-2 px-8 py-3 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-500/25"
               >
                 View Projects
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +60,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-yellow-400 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-yellow-400/20"
+                className="nav-text inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-yellow-400 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-yellow-400/20"
               >
                 Contact Me
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

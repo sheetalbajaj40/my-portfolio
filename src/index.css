@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+}
+
+/* Custom Typography Classes */
+.heading-primary {
+  @apply font-poppins font-extrabold tracking-tight;
+}
+
+.heading-secondary {
+  @apply font-poppins font-bold tracking-normal;
+}
+
+.body-text {
+  @apply font-inter text-base leading-relaxed;
+}
+
+.nav-text {
+  @apply font-inter font-medium tracking-wide;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better Text Rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

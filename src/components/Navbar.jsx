@@ -41,12 +41,12 @@ const Navbar = ({ scrollToSection, refs }) => {
           <Logo onClick={() => handleClick(refs.homeRef, '/')} />
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex space-x-8 text-lg font-semibold">
+          <ul className="hidden md:flex space-x-8 text-lg">
             {navItems.map((item, i) => (
               <li key={i}>
                 <button
                   onClick={() => handleClick(item.ref, item.path)}
-                  className={`text-gray-300 hover:text-yellow-500 transition-colors duration-300 ${
+                  className={`nav-text text-gray-300 hover:text-yellow-500 transition-colors duration-300 ${
                     (location.pathname === '/' && item.path === '/') || 
                     (location.pathname === item.path && item.path !== '/') 
                       ? 'text-yellow-400'
@@ -82,12 +82,12 @@ const Navbar = ({ scrollToSection, refs }) => {
 
         {/* Mobile Dropdown */}
         <div className={`md:hidden bg-gray-900 text-white transition-max-height duration-500 overflow-hidden ${isMenuOpen ? 'max-h-screen py-4' : 'max-h-0'}`}>
-          <ul className="space-y-4 text-center text-lg font-semibold">
+          <ul className="space-y-4 text-center text-lg">
             {navItems.map((item, i) => (
               <li key={i}>
                 <button
                   onClick={() => handleClick(item.ref, item.path)}
-                  className={`text-gray-300 hover:text-yellow-500 transition-colors duration-300 ${
+                  className={`nav-text text-gray-300 hover:text-yellow-500 transition-colors duration-300 ${
                     (location.pathname === '/' && item.path === '/') || 
                     (location.pathname === item.path && item.path !== '/') 
                       ? 'text-yellow-400'
