@@ -7,8 +7,14 @@ export default {
     theme: {
       extend: {
         fontFamily: {
-          inter: ['Inter', 'system-ui', 'sans-serif'],
-          poppins: ['Poppins', 'system-ui', 'sans-serif'],
+          'outfit': ['Outfit', 'system-ui', 'sans-serif'],
+          'space': ['Space Grotesk', 'system-ui', 'sans-serif'],
+        },
+        animation: {
+          'spin-slow': 'spin 8s linear infinite',
+        },
+        letterSpacing: {
+          'widest': '0.2em',
         },
       },
     },

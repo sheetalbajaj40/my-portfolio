@@ -5,18 +5,18 @@ import timesheetImage from '../assets/download.jpeg';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-900 text-gray-100 relative overflow-hidden">
+    <section id="projects" className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-96 h-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full bg-yellow-600/5 blur-3xl"></div>
+        <div className="absolute -top-40 -right-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-32 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
       </div>
 
       <div className="container mx-auto max-w-6xl px-6 relative">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            <span className="text-transparent bg-clip-text theme-gradient">
               Featured Projects
             </span>
           </h2>
@@ -40,27 +40,25 @@ const Projects = () => {
           />
 
           {/* Add a placeholder card with a gradient background if no image */}
-          <div className="group relative bg-gradient-to-br from-gray-800 via-gray-800/50 to-gray-900 backdrop-blur-sm rounded-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-yellow-500/10 border border-gray-700/50 hover:border-yellow-400/50">
-            <div className="p-6 flex flex-col h-full justify-between min-h-[400px]">
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold">
-                  <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                    More Coming Soon
-                  </span>
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  I'm constantly working on new projects. Check back soon for more exciting developments!
-                </p>
-              </div>
-              <div className="flex items-center justify-center mt-6">
-                <span className="inline-flex items-center gap-2 text-yellow-400/70">
-                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  In Development
+          <div className="theme-card p-6 flex flex-col h-full justify-between min-h-[400px]">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold">
+                <span className="text-transparent bg-clip-text theme-gradient">
+                  More Coming Soon
                 </span>
-              </div>
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                I'm constantly working on new projects. Check back soon for more exciting developments!
+              </p>
+            </div>
+            <div className="flex items-center justify-center mt-6">
+              <span className="inline-flex items-center gap-2 text-white/70">
+                <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                In Development
+              </span>
             </div>
           </div>
         </div>

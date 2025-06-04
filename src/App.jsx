@@ -62,7 +62,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900">
+      <div className="min-h-screen bg-black text-white">
         <ScrollToTop />
         <Navbar scrollToSection={scrollToSection} refs={refs} />
         <Routes>
