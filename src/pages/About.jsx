@@ -1,33 +1,6 @@
 import React from 'react';
 
 const About = () => {
-  const personalInfo = {
-    name: "Sheetal Bajaj",
-    title: "Front End Developer",
-    location: "Punjab, India",
-    intro: "I'm a passionate Front End Developer with expertise in modern web technologies. I love building responsive and user-friendly applications that solve real-world problems.",
-    description: [
-      "Specializing in React.js and modern JavaScript, I create efficient and scalable web applications with clean, maintainable code.",
-      "Currently focused on full-stack development with experience in both frontend and backend technologies.",
-      "Passionate about learning new technologies and implementing best practices in software development."
-    ],
-    keySkills: [
-      "React.js",
-      "JavaScript (ES6+)",
-      "Tailwind CSS",
-      "RESTful APIs",
-      "Git & GitHub",
-      "Responsive Design"
-    ],
-    interests: [
-      "Web Development",
-      "UI/UX Design",
-      "Software Architecture",
-      "Performance Optimization",
-      "Open Source"
-    ]
-  };
-
   return (
     <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4 max-w-5xl">
@@ -38,93 +11,58 @@ const About = () => {
               About Me
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            {personalInfo.intro}
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Column - Main Content */}
-          <div className="space-y-8">
-            <div className="theme-card p-6">
-              <h3 className="text-2xl font-semibold text-white mb-4">Professional Journey</h3>
-              <div className="space-y-4">
-                {personalInfo.description.map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </div>
-
-            <div className="theme-card p-6">
-              <h3 className="text-2xl font-semibold text-white mb-4">Areas of Interest</h3>
-              <div className="flex flex-wrap gap-3">
-                {personalInfo.interests.map((interest, index) => (
-                  <span
-                    key={index}
-                    className="theme-tag"
-                  >
-                    {interest}
-                  </span>
-                ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Photo Section */}
+          <div className="relative flex items-center justify-center">
+            <div className="relative w-[280px] aspect-square">
+              {/* Outer Glow */}
+              <div className="absolute -inset-4 bg-white/5 rounded-full blur-2xl"></div>
+              {/* Animated Border */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white via-gray-300 to-white animate-spin-slow"></div>
+              {/* Image Container */}
+              <div className="absolute inset-1 rounded-full overflow-hidden bg-black p-1 shadow-2xl shadow-white/10">
+                <div className="w-full h-full rounded-full overflow-hidden border border-white/20 p-2 bg-gradient-to-br from-white/10 to-transparent backdrop-blur">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center text-4xl md:text-5xl font-bold text-white relative group">
+                    <span className="font-outfit transform transition-transform duration-300 group-hover:scale-110">SB</span>
+                    {/* Shine Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column - Skills & Info */}
-          <div className="space-y-8">
-            <div className="theme-card p-6">
-              <h3 className="text-2xl font-semibold text-white mb-4">Technical Expertise</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {personalInfo.keySkills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300"
-                  >
-                    <svg
-                      className="w-5 h-5 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <span>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Text Content */}
+          <div className="space-y-6 text-gray-300">
+            <p className="leading-relaxed">
+              Passionate about creating sleek, responsive, and intuitive websites with modern web technologies. Currently working as a Frontend Engineer Intern at Third Eye AI (JBM Group).
+            </p>
+            
+            <p className="leading-relaxed">
+              I specialize in building efficient and user-friendly web applications using HTML5, CSS3, JavaScript, and React.js. My focus is on creating clean, maintainable code that delivers exceptional user experiences and meets business objectives.
+            </p>
 
-            {/* Quick Info Card */}
-            <div className="theme-card p-6">
-              <h3 className="text-2xl font-semibold text-white mb-4">Quick Info</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 hover:text-white transition-colors duration-300">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <span className="text-gray-300">{personalInfo.name}</span>
-                </div>
-                <div className="flex items-center gap-3 hover:text-white transition-colors duration-300">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span className="text-gray-300">{personalInfo.title}</span>
-                </div>
-                <div className="flex items-center gap-3 hover:text-white transition-colors duration-300">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-gray-300">{personalInfo.location}</span>
-                </div>
-              </div>
+            <p className="leading-relaxed">
+              With a strong foundation in modern frontend development practices, I enjoy tackling complex challenges and turning them into elegant solutions. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+            </p>
+
+            <p className="leading-relaxed">
+              I believe in writing clean, efficient code and creating intuitive user interfaces that make a difference. Whether it's optimizing performance or implementing responsive designs, I'm dedicated to delivering high-quality results.
+            </p>
+
+            {/* CTA Button */}
+            <div className="pt-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 theme-button rounded-full font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                Hire Me
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
