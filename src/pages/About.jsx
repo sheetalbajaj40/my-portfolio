@@ -13,27 +13,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Photo Section */}
-          <div className="relative flex items-center justify-center">
-            <div className="relative w-[280px] aspect-square">
-              {/* Outer Glow */}
-              <div className="absolute -inset-4 bg-white/5 rounded-full blur-2xl"></div>
-              {/* Animated Border */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white via-gray-300 to-white animate-spin-slow"></div>
-              {/* Image Container */}
-              <div className="absolute inset-1 rounded-full overflow-hidden bg-black p-1 shadow-2xl shadow-white/10">
-                <div className="w-full h-full rounded-full overflow-hidden border border-white/20 p-2 bg-gradient-to-br from-white/10 to-transparent backdrop-blur">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-white/10 to-transparent flex items-center justify-center text-4xl md:text-5xl font-bold text-white relative group">
-                    <span className="font-outfit transform transition-transform duration-300 group-hover:scale-110">SB</span>
-                    {/* Shine Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="grid grid-cols-1 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 text-gray-300">
             <p className="leading-relaxed">
