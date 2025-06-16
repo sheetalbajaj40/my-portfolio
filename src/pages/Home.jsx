@@ -28,7 +28,7 @@ const Home = () => {
                 {/* Download Resume Button */}
                 <div className="mt-12">
                   <a
-                    href="/Sheetal_Bajaj_Frontend.pdf"
+                    href="/Sheetal_Bajaj_Frontend "
                     download
                     className="font-space inline-flex items-center gap-2 px-8 py-4 theme-button rounded-full font-semibold tracking-wide transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg text-lg"
                   >
