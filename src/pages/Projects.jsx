@@ -1,9 +1,9 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import kaizenDiagram from 'src\assets\kaizen.png';
-import timesheetImage from 'src\assets\timesheet.jpeg';
-import portfolioImage from 'src\assets\portfolio.png';
-import todoAppImage from 'src\assets\todo-app.png';
+import kaizenImage from '../assets/kaizen.png';
+import timesheetImage from '../assets/timesheet.jpeg';
+import todoAppImage from '../assets/todo-app.png';
+import portfolioImage from '../assets/portfolio.png';
 
 const Projects = () => {
   return (
@@ -32,7 +32,7 @@ const Projects = () => {
           <ProjectCard
             title="KAIZEN"
             description="Process improvement tracking platform. Built responsive UI components using React.js, Tailwind CSS, and Redux Toolkit. Integrated REST APIs and focused on code reusability and performance optimization."
-            imageUrl={kaizenDiagram}
+            imageUrl={kaizenImage}
           />
 
           <ProjectCard
