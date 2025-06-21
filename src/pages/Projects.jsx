@@ -1,7 +1,9 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import kaizenDiagram from '../assets/kaizen-diagram.png';
-import timesheetImage from '../assets/download.jpeg';
+import kaizenDiagram from 'src\assets\kaizen.png';
+import timesheetImage from 'src\assets\timesheet.jpeg';
+import portfolioImage from 'src\assets\portfolio.png';
+import todoAppImage from 'src\assets\todo-app.png';
 
 const Projects = () => {
   return (
@@ -37,6 +39,18 @@ const Projects = () => {
             title="TIMESHEET"
             description="A time-tracking application for employees. Developed dynamic forms using React.js and Bootstrap. Integrated RESTful APIs to manage task data and optimized UX for better real-time task logging."
             imageUrl={timesheetImage}
+          />
+
+           <ProjectCard
+            title="Portfolio Website"
+            description="Designed and built a responsive portfolio using React.js and Tailwind CSS to showcase my skills, resume, and projects with smooth scroll and SPA navigation."
+            imageUrl={portfolioImage}
+          />
+
+          <ProjectCard
+            title="To-Do List App"
+            description="Developed a minimal productivity tool using React.js. Includes features like task creation, completion toggles, filtering, and persistent state with localStorage."
+            imageUrl={todoAppImage}
           />
 
           {/* Add a placeholder card with a gradient background if no image */}

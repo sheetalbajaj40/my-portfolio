@@ -12,7 +12,7 @@ const Experience = () => {
         "Assisted in modernizing legacy JavaScript codebases by migrating to ReactJS, improving frontend maintainability and reducing UI load times.",
         "Developed scalable and responsive UI components using ReactJS and Tailwind CSS, ensuring mobile-first, cross-browser compatibility.",
         "Collaborated with backend developers to integrate RESTful APIs, enabling seamless communication between frontend and backend systems.",
-        "Implemented state management solutions using Redux Toolkit and Context API, improving data flow across the application.",
+        "Managed component-level state effectively using React’s built-in hooks and Context API for improved data flow across the application.",
         "Performed debugging, cross-browser testing, and performance optimization to ensure a smooth and consistent user experience.",
         "Utilized Git, GitHub, and VS Code for daily development and version control.",
         "Actively participated in team stand-ups and collaborated with design and backend teams to deliver clean, production-ready UIs."
